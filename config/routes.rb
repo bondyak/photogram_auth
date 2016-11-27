@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+  get "/", :controller => "photos", :action => "index"
+
   # READ
   get "/users", :controller => "users", :action => "index"
   get "/users/:id", :controller => "users", :action => "show"
@@ -55,8 +58,7 @@ Rails.application.routes.draw do
   get "/delete_photo/:id", :controller => "photos", :action => "destroy"
   #------------------------------
 
-  devise_for :users
-  root "photos#index"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
