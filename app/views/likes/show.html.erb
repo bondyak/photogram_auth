@@ -6,10 +6,10 @@
   <div class="col-md-12 mb-2">
     <dl class="dl-horizontal">
       <dt>User</dt>
-      <dd><%= @like.user_id %></dd>
+      <dd><%= @like.user.username %></dd>
 
       <dt>Photo</dt>
-      <dd><%= @like.photo_id %></dd>
+      <dd><img src="<%= @like.photo.image %>" class="img-responsive"></dd>
 
     </dl>
 
